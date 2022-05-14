@@ -1,0 +1,14 @@
+<!--<div class="downcontainer">
+            <div class="heading">
+                <img src="images/<?php echo  $row['app_image'] ?>" alt="app image" width="auto" height="300vh">
+                <h2 class="title"><?php echo $row['app_name'] ?></h2>
+                <h3><?php echo $row['company_name'] ?></h3>
+                <h3><?php echo $row['cat_name'] ?></h3>
+
+            </div>  
+                        <a href="uploads/<?php echo $row['file_path']?>" class="downloadbtn">Download Now &darr;</a>
+                        <br>
+                        <hr width="99%">
+                        <h4 class="desc"><?php echo $row['description']?></h4>
+        </div>-->
+        //from Download.php
