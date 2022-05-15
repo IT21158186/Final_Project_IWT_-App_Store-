@@ -92,7 +92,8 @@ INSERT INTO administrator VALUES('404','Ad.Nimsara','nimsara@gmail.com','nimsara
 INSERT INTO administrator VALUES('505','Ad.Sandali','sandali@gmail.com','sandali1234');
 
 ALTER TABLE `developer`
-ADD UNIQUE (email)
+ADD UNIQUE (email);
+ALTER TABLE `developer`
 ADD `mobile` varchar(255); 
 
 
