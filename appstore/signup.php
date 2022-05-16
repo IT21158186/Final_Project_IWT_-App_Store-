@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <form action="sign.php" method="POST" class="form">
+        <form action="signup.php" method="POST" class="form">
         <a href="index.php"><img src="images/logo.png" alt="logo" class="logo" width="150px"></a>
             <h2 class="title">User | Sign Up</h2>
             <?php if(isset($_GET['error'])){?>

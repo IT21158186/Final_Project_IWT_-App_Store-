@@ -7,7 +7,7 @@
     </head>
     <body>
         <div class="form">
-        <form action="loginform.php" method="POST">
+        <form action="login.php" method="POST">
             <a href="index.php"><img src="images/logo.png" alt="logo" class="logo" width="150px"></a>
             <h2 class="title">User | Login</h2>
             <?php if(isset($_GET['error'])){?>

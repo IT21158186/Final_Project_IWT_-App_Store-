@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <form action="devsign.php" method="POST" class="form">
+        <form action="devsignup.php" method="POST" class="form">
         <a href="index.php"><img src="images/logo.png" alt="logo" class="logo" width="150px"></a>
             <h2 class="title">Developer | Sign Up</h2>
             <?php if(isset($_GET['error'])){?>
