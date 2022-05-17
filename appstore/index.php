@@ -94,7 +94,7 @@ session_start()
         </div>
         
         <footer>
-            <h3>&copy Nimsara mahagedara</h3>
+            <h3>&copy MLB_07.01.06</h3>
             <h4>All Right Reserved</h4>
         </footer>
        
