@@ -126,11 +126,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["app"]["tmp_name"], $target_file) && move_uploaded_file($_FILES["app_image"]["tmp_name"], $target_file2)) {
-        $message= "The file ". htmlspecialchars( basename( $_FILES["app"]["name"])). " has been uploaded.";
+        $message= "The app ". htmlspecialchars( basename( $_FILES["app"]["name"])). " has been uploaded Successfully!";
         $appname = $_POST['app_name'];
         $desc = $_POST['description'];
-       /* $dev_id = $_POST['developer_id'];*/
-       $dev_id = 1;
+        $dev_id = $_SESSION['developer_id'];
         $cat = $_POST['cat_id'];
         $filename = htmlspecialchars( basename( $_FILES["app"]["name"]));
         $imgname = htmlspecialchars( basename( $_FILES["app_image"]["name"]));

@@ -22,13 +22,14 @@ include "config.php";
                     
                     <li>
                         <p>Hello,<?php 
-                            if(isset($_SESSION['first_name']))
-                                echo $_SESSION['first_name']; ?>
+                            if(isset($_SESSION['company_name']))
+                                echo $_SESSION['company_name']; ?>
                         </p>
                     </li>
+                    
                     <div class="login">
                     <?php
-                        if(isset($_SESSION['first_name'])){
+                        if(isset($_SESSION['company_name'])){
                             echo '<a href="logout.php" id="logout">Log out</a>';
                         }
                     ?>
