@@ -49,7 +49,7 @@ $row = mysqli_fetch_assoc($result);
         </div>
         <br/>
         
-        <table class="downcontainer" >
+        <table class="downcontainer">
             <tr>
                 <td rowspan="3" class="appimg"><img src="images/<?php echo  $row['app_image'] ?>" alt="app image"></td>
                 <td><h2 class="title"><?php echo $row['app_name'] ?></h2></td>

@@ -65,8 +65,8 @@ session_start()
             <?php
                 $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100 ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
-                while($row = mysqli_fetch_array($result)){
-            ?>
+                while($row = mysqli_fetch_array($result)){?>
+            
             <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
                 <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
                 <h4><?php echo $row['app_name'] ?></h4>
@@ -94,7 +94,7 @@ session_start()
         </div>
         
         <footer>
-            <h3>&copy MLB_07.01.06</h3>
+            <h3>&copy MLB_07.01_06</h3>
             <h4>All Right Reserved</h4>
         </footer>
        

@@ -81,7 +81,7 @@ include "config.php";
         
         
         <footer>
-            <h3>&copy MLB_07.01.06</h3>
+            <h3>&copy MLB_07.01_06</h3>
             <h4>All Right Reserved</h4>
         </footer>
        
