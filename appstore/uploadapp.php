@@ -44,7 +44,7 @@ include "config.php";
                         <?php if(isset($_GET['error2'])){?>
                             <p class='error2'> <?php echo $_GET['error2'];?></p>
                         <?php } ?>
-                            <input type="text" placeholder="App Name" class="field" name="app_name" required>
+                            <input type="text" placeholder="App Name" class="field" name="app_name" maxlength = "10" required>
                             
                             <input type="hidden" name="developer_id">
 
