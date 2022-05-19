@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: bolder-box;
+    font-family: ,cursive;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width:100%;
+    background: #ffffff;
+}
+
+h1 {
+    color: #36187d;
+    text-align: center;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    padding: 60px 30px;
+    margin: 20px;
+    background: #F5F5F5;
+    box-shadow: 0.6em 0.6em 1.2em #d2dce9,
+               -0.5em -0.5em 1em #ffffff;
+    border-radius: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentBx h4 {
+   color: #36187d;
+   font-size: 1.3rem;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 1px;
+}
+
+.contentBx h5 {
+   color: #6c758f;
+   font-size: 1rem;
+   font-weight: bold;
+   text-align: center;
+}
+
+.scm {
+   margin-top: 20px;
+}
+
+.scm  a {
+   text-decoration: none;
+   color: #6c758f;
+   font-size: 30px;
+   margin: 10px;
+   transition: color 0.4s;
+}
+.scm a:hover {
+   color: #0196e3;
+}
+
+/*navigation bar*/
+
+.navcontainer{
+    background-color: mediumslateblue;
+    color: aliceblue;
+    display: flex;
+}
+.navcontainer li{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.navcontainer ul{
+    list-style-type: none;
+    margin: 10px auto;
+    
+}
+.navcontainer img:hover{
+    filter:grayscale(0) saturate(4);
+}
+.navcontainer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: aliceblue;
+}
+.navcontainer a:hover{
+    color: black;
+}
+.search{
+    padding: 8px;
+    width:30vw;
+    border:none;
+    outline: none;
+    float: left;
+}
+.searchbtn{
+    padding: 8px 16px;
+    background-color: azure;
+    border: none;
+    cursor: pointer;
+    float: left;
+    
+}
+.login a{
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}
+
+/*footer*/
+
+footer{
+    display: inline-block;
+    position:static;
+    bottom:0;
+    background-color: aquamarine;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+body h3{
+    margin-left: 5px;
+}
+@media screen and (max-width: 992px) {
+.navcontainer{
+        display: block;
+    }
+}
