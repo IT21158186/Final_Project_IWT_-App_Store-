@@ -9,6 +9,10 @@ include "config.php";
         <link rel="stylesheet" href="styles/dashstyle.css">
         <link rel="stylesheet" href="styles/uploadform.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <div class="navcontainer">
@@ -16,18 +20,17 @@ include "config.php";
             <nav>
                 <ul>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-                    <li><a href="">Your Apps</a></li>
                     <li><a href="uploadapp.php">Upload App</a></li>
                     <li><a href="">About us</a></li>
                     <li>
                         <p>Hello,<?php 
-                            if(isset($_SESSION['first_name']))
-                                echo $_SESSION['first_name']; ?>
+                            if(isset($_SESSION['company_name']))
+                                echo $_SESSION['company_name']; ?>
                         </p>
                     </li>
                     <div class="login">
                     <?php
-                        if(isset($_SESSION['first_name'])){
+                        if(isset($_SESSION['company_name'])){
                             echo '<a href="logout.php" id="logout">Log out</a>';
                         }
                     ?>

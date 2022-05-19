@@ -79,7 +79,9 @@ if($_SESSION['developer_id']|| $_SESSION['developer_id'] == 0){
                 
                 <td><?php echo $row['app_name'] ?></td>
                 <td>4.7</td><!-- Add here the rating code-->
-                <td><div class="smallbtncontainer"><a href="remove.php?appid=<?php echo $appid ?>" class="smallbtn" value="">Remove</a><a href="" class="smallbtn" value="">Update</a> <a href="" class="smallbtn" value="">View</a></div></td>
+                <td><div class="smallbtncontainer"><a href="remove.php?appid=<?php echo $appid ?>" class="smallbtn" value="">Remove</a>
+                <a href="update.php?id=<?php echo $appid ?>" class="smallbtn" value="">Update</a> 
+                <a href="view.php?id=<?php echo $appid ?>" class="smallbtn" value="">View</a></div></td>
             </tr>
 
             <?php 
