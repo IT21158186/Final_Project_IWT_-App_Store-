@@ -1,0 +1,22 @@
+.confirm_msg{
+    background-color: white;
+    width: 40vw;
+    height: 25vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin:10% auto;
+}
+.confirm_msg p{
+    display: inline-block;
+    margin: 40px auto auto 50px;
+    text-align: center;
+    position: relative;
+
+}
+.confirm_msg a{
+    display: inline-block;
+    align-items: baseline;
+}
+.btncontainer{
+    
+    margin: 20px auto;
+}

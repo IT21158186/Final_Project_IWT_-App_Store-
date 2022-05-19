@@ -7,6 +7,7 @@ if($_SESSION['developer_id']|| $_SESSION['developer_id'] == 0){
 <html>
     <head>
         <title>Upload App | AppsyStore</title>
+        <link rel="stylesheet" href="styles/confirm_msg.css">
         <link rel="stylesheet" href="styles/dashstyle.css">
         <link rel="stylesheet" href="styles/uploadform.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
@@ -43,49 +44,57 @@ if($_SESSION['developer_id']|| $_SESSION['developer_id'] == 0){
             </nav>
             
         </div>
-        <?php 
-            if(isset($_GET['error'])){
+        <!--Confirm message is here-->
+        <?php
+        if(!isset($_SESSION['appid'])){
+             $_SESSION['appid'] = $_GET['appid'];
+        } 
         ?>
-            <p class="error">
-                <?php 
-                    echo $_GET['error'];
-                }
-            ?>
-            </p>
-        
-        <!--Dashboard implementation is here-->
-        <table class="dashboardform">
-        <caption>Dashboard :</caption> 
-            <tr>
-                <td colspan="4"><center><b>Applications</b></center></td>
-            </tr>
-            <tr>
-                <th>App ID</th>
-                <th>App Name</th>
-                <th>Ratings</th>
-                <th>Actions</th>
-            </tr>
-            <?php
-            $devid = $_SESSION['developer_id'];
-            $sql = "SELECT * FROM apps a, developer d WHERE d.developer_id = a.developer_id AND a.developer_id = $devid";
-            $result = mysqli_query($conn,$sql);
-            if(!empty($result)){
-            while($row = mysqli_fetch_array($result)){
-                $appid = $row['app_id'];
-            ?>
+        <div class="confirm_msg">
+            <div class="msgcontainer">
+                <p>Are You Sure to Permenently Delete this app ?</p>
+                        <div class="btncontainer">
+                            <center>
+                                <a href="remove.php?state=1" class="smallbtn">Yes</a>
+                                <a href="dashboard.php" class="smallbtn">No</a>
+                            </center>
+                            
+                        </div>
+            </div>
+                        
+                        
 
-            <tr>
-                <td><?php echo $row['app_id']?></td>
-                
-                <td><?php echo $row['app_name'] ?></td>
-                <td>4.7</td><!-- Add here the rating code-->
-                <td><div class="smallbtncontainer"><a href="remove.php?appid=<?php echo $appid ?>" class="smallbtn" value="">Remove</a><a href="" class="smallbtn" value="">Update</a> <a href="" class="smallbtn" value="">View</a></div></td>
-            </tr>
-
-            <?php 
+        </div>
+        <?php 
+        if(isset($_GET['state'])){
+            $appid = $_SESSION['appid'];
+            $sql1 = "SELECT * FROM apps WHERE app_id = $appid";
+            $result = mysqli_query($conn,$sql1);
+            $result = mysqli_fetch_assoc($result);
+           
+            $sql = "DELETE FROM review WHERE app_id = $appid";
+            $sql2 = "DELETE FROM apps WHERE app_id = $appid "; 
+            // PHP program to delete a file named gfg.txt
+            // using unlink() function
+            $filepath = $result['file_path'];
+            $imgpath = $result['app_image'];
+            $image_pointer = "images/$imgpath";
+            $file_pointer = "uploads/$filepath";
+            
+            // Use unlink() function to delete a file
+            if (unlink($file_pointer)) {
+                unlink($image_pointer);
+                mysqli_query($conn,$sql);
+                mysqli_query($conn,$sql2);
+                header("Location: dashboard.php?error=$file_pointer has been deleted");
             }
-                } ?>
-        </table>
+            else {
+               header("Location: dashboard.php?error=$file_pointer cannot be deleted due to an error");
+            }
+            
+
+        }
+        ?>
         
         
         

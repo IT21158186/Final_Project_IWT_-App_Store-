@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+body{
+    background-color: #f8f8f8;
+}
+nav{
+    margin-left: 50px;
+    margin-top: 4px;
+}
+.navcontainer{
+    background-color: white;
+    color: darkgray;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0,0, 0.2);
+}
+.navcontainer li{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.navcontainer ul{
+    list-style-type: none;
+    margin: 10px auto;
+    
+}
+.navcontainer img:hover{
+    filter:grayscale(0) saturate(4);
+}
+.navcontainer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: darkgray;
+    vertical-align:baseline;
+}
+.navcontainer a:hover{
+    color: black;
+}
+.search{
+    padding: 8px;
+    width:30vw;
+    border:none;
+    outline: none;
+    float: left;
+}
+.searchbtn{
+    padding: 8px 16px;
+    background-color: azure;
+    border: none;
+    cursor: pointer;
+    float: left;
+    
+}
+.login a{
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}
+.item:hover{
+    cursor: pointer;
+   
+}
+.item{
+    margin:10px;
+    display: inline-block;
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.item:hover{
+    transform:translateY(-5px);
+}
+.container{
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 0px;
+    background-color: white;
+}
+.container a{
+    text-decoration: none;
+    color: grey;
+}
+
+footer{
+    display: inline-block;
+    position:fixed;
+    bottom:0;
+    background-color: gray;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+body h3{
+    margin-left: 5px;
+}
+@media screen and (max-width: 992px) {
+.navcontainer{
+        display: block;
+    }
+}
+
+.dashboardform{
+    background-color: white;
+    width: 70%;
+    height: auto;
+    margin: 5% auto;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.dashboardform .smallbtn{
+    margin:0 10px;
+
+}
+.smallbtncontainer{
+    display: inline;
+    margin-left: 30px;
+}
+.dashboardform td, .dashboardform th{
+    text-align: center;
+    padding: 5px 10px;
+}
+.dashboardform th{
+    background-color: bisque;
+}
+.dashboardform caption{
+    text-align: left;
+    font-size: 28px;
+    margin:10px 0;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+.smallbtn{
+    padding: 3px 15px;
+    background-color: lightgray;
+    text-decoration: none;
+    border-radius: 5px;
+}
