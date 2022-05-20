@@ -60,13 +60,13 @@ $result = mysqli_fetch_assoc(mysqli_query($conn,$sql));
 
                     <textarea name="description" cols="30" rows="4" class="field" placeholder="Description"  ><?php echo $result['description']?></textarea>
                             
-                    Select app image to upload (use a 1:1 png file):<?php if(isset($_GET['imgerror'])){?>
+                    Select updated icon (use a 1:1 png file)(optional):<?php if(isset($_GET['imgerror'])){?>
                     <p class='error'> <?php echo $_GET['imgerror'];?></p>
                     <?php } ?>
 
                     <input type="file" name="app_image" class="field" value="uploads/<?php echo $result['file_path']?>">
                             
-                    Select Your App File:<?php if(isset($_GET['error'])){?>
+                    Upload your Updated App(optional):<?php if(isset($_GET['error'])){?>
                                                     <p class="error"> <?php echo $_GET['error'];?></p>
                                                 <?php } ?>
                     <input type="file" name="app" class="field">
