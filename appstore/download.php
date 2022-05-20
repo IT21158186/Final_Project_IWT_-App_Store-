@@ -21,10 +21,10 @@ $row = mysqli_fetch_assoc($result);
             <nav>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="">Apps</a></li>
-                    <li><a href="">Games</a></li>
+                    <li><a href="app.php">Apps</a></li>
+                    <li><a href="game.php">Games</a></li>
                     <li><a href="">Contact us</a></li>
-                    <li><a href="">About us</a></li>
+                    <li><a href="aboutUs.php">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
                         <input type="submit" value="Search" class="searchbtn"></form>

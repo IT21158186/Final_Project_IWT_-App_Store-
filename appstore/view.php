@@ -26,7 +26,7 @@ $row = mysqli_fetch_assoc($result);
             <ul>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
                     <li><a href="uploadapp.php">Upload App</a></li>
-                    <li><a href="">About us</a></li>
+                    <li><a href="aboutusdev.php">About us</a></li>
                     
                     <li>
                         <p>Hello,<?php 

@@ -6,10 +6,14 @@ include 'config.php';
 <html>
 	<head>
 		<title> About page </title>
+		<link rel="stylesheet" href="styles/dashstyle.css">
 		<link rel="stylesheet" href="styles/aboutUs.css">
-		<link rel="stylesheet" href="styles/style.css">
 		<script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+		<!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet"> 
 	</head>
 	
 	<body>
@@ -17,31 +21,26 @@ include 'config.php';
         <div class="navcontainer">
             <img src="images/logo.png" alt="logo" width="auto" height="50px">
             <nav>
-                <ul>
-                    <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="">Apps</a></li>
-                    <li><a href="">Games</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="aboutUs.php">About us</a></li>
-                    <li>
-                        <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
-                        <input type="submit" value="Search" class="searchbtn"></form>
-                    </li>
+				<ul>
+                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li><a href="uploadapp.php">Upload App</a></li>
+                    <li><a href="aboutusdev.php">About us</a></li>
+                    
                     <li>
                         <p>Hello,<?php 
-                            if(isset($_SESSION['first_name']))
-                                echo $_SESSION['first_name'] ?>
+                            if(isset($_SESSION['company_name']))
+                                echo $_SESSION['company_name']; ?>
                         </p>
                     </li>
+                    
                     <div class="login">
                     <?php
-                        if(isset($_SESSION['first_name'])){
+                        if(isset($_SESSION['company_name'])){
                             echo '<a href="logout.php" id="logout">Log out</a>';
-                        }else
-                            echo '<a href="login.php" id="logout">Log in</a>';
+                        }
                     ?>
                     </div> 
-                </ul>  
+                </ul>    
                 
             </nav>
             

@@ -27,7 +27,7 @@ $result = mysqli_fetch_assoc(mysqli_query($conn,$sql));
                 <ul>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
                     <li><a href="uploadapp.php">Upload App</a></li>
-                    <li><a href="">About us</a></li>
+                    <li><a href="aboutusdev.php">About us</a></li>
                     <li>
                         <p>Hello,<?php 
                             if(isset($_SESSION['company_name']))
@@ -53,12 +53,12 @@ $result = mysqli_fetch_assoc(mysqli_query($conn,$sql));
                     <?php if(isset($_GET['error2'])){?>
                         <p class='error2'> <?php echo $_GET['error2'];?></p>
                     <?php } ?>
-
+                    <img src="images/<?php echo $result['app_image']?>" alt="app image" id="appimage">
                     <input type="text" placeholder="App Name" class="field" name="app_name" maxlength = "10" value="<?php echo $result['app_name']?>" required>
                             
                     <input type="hidden" name="app_id" value="<?php echo $appid?>">
 
-                    <textarea name="description" cols="30" rows="7" class="field" placeholder="Description"  ><?php echo $result['description']?></textarea>
+                    <textarea name="description" cols="30" rows="4" class="field" placeholder="Description"  ><?php echo $result['description']?></textarea>
                             
                     Select app image to upload (use a 1:1 png file):<?php if(isset($_GET['imgerror'])){?>
                     <p class='error'> <?php echo $_GET['imgerror'];?></p>
@@ -82,7 +82,7 @@ $result = mysqli_fetch_assoc(mysqli_query($conn,$sql));
                              <?php } ?>
                             <!--<input type="password" name="password" class="field" placeholder="Password">-->
                             <input type="submit" value="Upload" class="btn">
-                            <a href="" >Cancel</a><br>
+                            <a href="dashboard.php" >Cancel</a><br>
                         </form>
            </div>
         <footer>
