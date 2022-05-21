@@ -39,6 +39,9 @@ nav{
 .navcontainer a:hover{
     color: black;
 }
+#active{
+    color: black;
+}
 .search{
     padding: 8px;
     width:30vw;
@@ -105,8 +108,7 @@ body h3{
 
 .dashboardform{
     background-color: white;
-    width: 70%;
-    height: auto;
+   width: 70%;
     margin: 5% auto;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);

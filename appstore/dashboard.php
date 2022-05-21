@@ -20,7 +20,7 @@ if($_SESSION['developer_id']|| $_SESSION['developer_id'] == 0){
             <img src="images/logo.png" alt="logo" width="auto" height="50px">
             <nav>
                 <ul>
-                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li ><a href="dashboard.php" id="active"><i class="fa-solid fa-house" ></i> Dashboard</a></li>
                     <li><a href="uploadapp.php">Upload App</a></li>
                     <li><a href="aboutusdev.php">About us</a></li>
                     
@@ -56,6 +56,7 @@ if($_SESSION['developer_id']|| $_SESSION['developer_id'] == 0){
         <!--Dashboard implementation is here-->
         <table class="dashboardform">
         <caption>Dashboard :</caption> 
+        <thead>
             <tr>
                 <td colspan="4"><center><b>Applications</b></center></td>
             </tr>
@@ -65,6 +66,8 @@ if($_SESSION['developer_id']|| $_SESSION['developer_id'] == 0){
                 <th>Ratings</th>
                 <th>Actions</th>
             </tr>
+        </thead>
+        <tbody>
             <?php
             $devid = $_SESSION['developer_id'];
             $sql = "SELECT * FROM apps a, developer d WHERE d.developer_id = a.developer_id AND a.developer_id = $devid";
@@ -87,10 +90,9 @@ if($_SESSION['developer_id']|| $_SESSION['developer_id'] == 0){
             <?php 
             }
                 } ?>
+        </tbody>
         </table>
-        
-        
-        
+            
         <footer>
             <h3>&copy MLB_07.01_06</h3>
             <h4>All Right Reserved</h4>

@@ -16,7 +16,7 @@ session_start()
             <nav>
                 <ul>
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="app.php">Apps</a></li>
+                    <li><a href="app.php" id="active">Apps</a></li>
                     <li><a href="game.php">Games</a></li>
                     <li><a href="">Contact us</a></li>
                     <li><a href="aboutUs.php">About us</a></li>
@@ -49,7 +49,11 @@ session_start()
             <?php
                 $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
+                $count = 0;
                 while($row = mysqli_fetch_array($result)){
+                    if($count >= 11){
+                        break;
+                    }
             ?>
             <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
                 <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
@@ -57,7 +61,7 @@ session_start()
                 <h5><?php echo $row['company_name']?></h5>
                 </a>
 
-        <?php } ?>
+        <?php $count++; } ?>
            
         </div>
         <h3>Apps :</h3>
@@ -65,7 +69,11 @@ session_start()
             <?php
                 $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100 ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
-                while($row = mysqli_fetch_array($result)){?>
+                $count = 0;
+                while($row = mysqli_fetch_array($result)){
+                    if($count >= 22){
+                        break;
+                    }?>
             
             <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
                 <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
@@ -73,7 +81,7 @@ session_start()
                 <h5><?php echo $row['company_name']?></h5>
                 </a>
 
-        <?php } ?>
+        <?php $count++;} ?>
            
         </div>
         

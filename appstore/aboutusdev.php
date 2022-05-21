@@ -24,7 +24,7 @@ include 'config.php';
 				<ul>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
                     <li><a href="uploadapp.php">Upload App</a></li>
-                    <li><a href="aboutusdev.php">About us</a></li>
+                    <li ><a href="aboutusdev.php" id="active">About us</a></li>
                     
                     <li>
                         <p>Hello,<?php 

@@ -22,7 +22,7 @@ include 'config.php';
                     <li><a href="">Apps</a></li>
                     <li><a href="">Games</a></li>
                     <li><a href="">Contact us</a></li>
-                    <li><a href="aboutUs.php">About us</a></li>
+                    <li><a href="aboutUs.php" id="active">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
                         <input type="submit" value="Search" class="searchbtn"></form>

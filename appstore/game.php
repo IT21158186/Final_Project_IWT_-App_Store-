@@ -17,7 +17,7 @@ session_start()
                 <ul>
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="app.php">Apps</a></li>
-                    <li><a href="game.php">Games</a></li>
+                    <li><a href="game.php" id="active">Games</a></li>
                     <li><a href="">Contact us</a></li>
                     <li><a href="aboutUs.php">About us</a></li>
                     <li>
