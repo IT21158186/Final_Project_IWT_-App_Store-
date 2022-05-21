@@ -7,7 +7,7 @@
 	</head>
 	
 	<body>
-
+		<!--navigation bar-->
         <div class="navcontainer">
             <img src="images/logo.png" alt="logo" width="auto" height="50px">
             <nav>
@@ -15,7 +15,7 @@
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="">Apps</a></li>
                     <li><a href="">Games</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="contactUs.php">Contact us</a></li>
                     <li><a href="aboutUs.php">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
@@ -41,12 +41,7 @@
             
         </div>
 
-
-
-
-
 		<h1>Our Team</h1>
-		<div class="slideshow-container">
 			<div class="team">
 				<!--person 1-->
 				<div class="card">
@@ -84,7 +79,7 @@
 					</div>
 				</div>
 			
-			<!--person 3-->
+				<!--person 3-->
 				<div class="card">
 					<div class="content">
 						<div class="image">
@@ -138,21 +133,12 @@
 					</div>
 				</div>
 			</div>
-			
-			<br>
-			
-			<div class="history">
-				<h1>History</h1>
-				<p> </p>		
-			</div>
-		</div>
+		<br>
 
-		    
         <footer>
             <h3>&copy MLB_07.01_06</h3>
             <h4>All Right Reserved</h4>
         </footer>
-		
 		
 	</body>
 </html>

@@ -11,6 +11,7 @@ session_start()
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <!--navigation bar start-->
         <div class="navcontainer">
             <img src="images/logo.png" alt="logo" width="auto" height="50px">
             <nav>
@@ -18,7 +19,7 @@ session_start()
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="">Apps</a></li>
                     <li><a href="">Games</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="contactUs.php">Contact us</a></li>
                     <li><a href="aboutUs.php">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
@@ -39,8 +40,8 @@ session_start()
                     ?>
                     </div> 
                 </ul>  
-                
             </nav>
+            <!--navigation bar end-->
             
         </div>
         <br/>
