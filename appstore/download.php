@@ -47,6 +47,9 @@ $row = mysqli_fetch_assoc($result);
             </nav>
             
         </div>
+        <?php if(isset($_GET['error'])){?>
+                    <p id='error'> <?php echo $_GET['error'];?></p>
+            <?php } ?>
         <br/>
         
         <table class="downcontainer">

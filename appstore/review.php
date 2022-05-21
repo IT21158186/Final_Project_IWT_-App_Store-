@@ -9,7 +9,7 @@ if(isset($_SESSION['email'])){
     $comment = $_POST['comment'];
     $sql = "INSERT INTO review VALUES('$appid','$email','4.7','$comment')";
     if(mysqli_query($conn,$sql)){
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        header('Location: ' . $_SERVER['HTTP_REFERER'].'&error=Review Added Successfully !');
     }
 }else{
     header("Location: login.php?error= Please Login First !");
