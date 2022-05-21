@@ -72,27 +72,29 @@ $row = mysqli_fetch_assoc($result);
            <strong>Write a Review : </strong> 
             <form action="review.php" method="post">
                 <textarea name="comment" id="commentarea" cols="10" rows="3" maxlength="100"></textarea>
+                <input type="hidden" value="<?php echo $_GET['id'] ?>" name="app_id">
 
                 <input type="submit" value="Post" class="postbtn">
             </form>
         </div>
+        <div class="commentscontainer">
         <?php 
             $sql = "SELECT * FROM review WHERE app_id = $appid";
             $result = mysqli_query($conn,$sql);
             if($result){
                 while($row = mysqli_fetch_array($result)){
         ?>
-        <div class="commentscontainer">
+        
              <div class="comments">
                 <strong> <?php echo $row['email'] ?> </strong>
                 <hr>
             <p><?php echo $row['comment'] ?></p>
             </div>
-        </div>
+        
 
         <?php }
                 } ?>
-       
+       </div>
         
         <footer>
             <h3>&copy MLB_07.01.06</h3>

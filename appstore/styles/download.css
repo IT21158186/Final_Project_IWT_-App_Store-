@@ -76,10 +76,10 @@
     margin: 0 auto;
     background-color: white;
     border-radius: 5px;
-    position: relative;
+    /*position: relative;*/
     color: gray;
     padding-top: 10px;
-    border: 1px solid gray;
+    border: 1px solid rgba(145, 145, 145, 0.5);
 
 }
 .comments strong{
