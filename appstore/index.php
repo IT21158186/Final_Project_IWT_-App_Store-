@@ -9,6 +9,7 @@ session_start()
         <title>Home | AppsyStore</title>
         <link rel="stylesheet" href="styles/style.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <!--navigation bar start-->
@@ -16,10 +17,17 @@ session_start()
             <img src="images/logo.png" alt="logo" width="auto" height="50px">
             <nav>
                 <ul>
+<<<<<<< HEAD
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="">Apps</a></li>
                     <li><a href="">Games</a></li>
                     <li><a href="contactUs.php">Contact us</a></li>
+=======
+                    <li><a href="index.php" id="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="app.php">Apps</a></li>
+                    <li><a href="game.php">Games</a></li>
+                    <li><a href="">Contact us</a></li>
+>>>>>>> a9f5458545f4525d0d23b6e8f64a836f939446ef
                     <li><a href="aboutUs.php">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
@@ -50,7 +58,11 @@ session_start()
             <?php
                 $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
+                $count = 0;
                 while($row = mysqli_fetch_array($result)){
+                    if($count >= 11){
+                        break;
+                    }
             ?>
             <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
                 <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
@@ -58,7 +70,7 @@ session_start()
                 <h5><?php echo $row['company_name']?></h5>
                 </a>
 
-        <?php } ?>
+        <?php $count++; } ?>
            
         </div>
         <h3>Apps :</h3>
@@ -66,7 +78,11 @@ session_start()
             <?php
                 $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100 ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
-                while($row = mysqli_fetch_array($result)){?>
+                $count = 0;
+                while($row = mysqli_fetch_array($result)){
+                    if($count >= 11){
+                        break;
+                    }?>
             
             <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
                 <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
@@ -74,7 +90,7 @@ session_start()
                 <h5><?php echo $row['company_name']?></h5>
                 </a>
 
-        <?php } ?>
+        <?php $count++; } ?>
            
         </div>
         <h3>Games :</h3>
@@ -82,15 +98,18 @@ session_start()
             <?php
                 $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 200 ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
+                $count = 0;
                 while($row = mysqli_fetch_array($result)){
-            ?>
+                    if($count >= 11){
+                        break;
+                    } ?>
             <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
                 <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
                 <h4><?php echo $row['app_name'] ?></h4>
                 <h5><?php echo $row['company_name']?></h5>
                 </a>
 
-        <?php } ?>
+        <?php $count++;} ?>
            
         </div>
         

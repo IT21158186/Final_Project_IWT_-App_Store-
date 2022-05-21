@@ -21,10 +21,10 @@ $row = mysqli_fetch_assoc($result);
             <nav>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="">Apps</a></li>
-                    <li><a href="">Games</a></li>
+                    <li><a href="app.php">Apps</a></li>
+                    <li><a href="game.php">Games</a></li>
                     <li><a href="">Contact us</a></li>
-                    <li><a href="">About us</a></li>
+                    <li><a href="aboutUs.php">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
                         <input type="submit" value="Search" class="searchbtn"></form>
@@ -68,6 +68,33 @@ $row = mysqli_fetch_assoc($result);
                 <td colspan="2"><h4 class="desc"><?php echo $row['description']?></h4></td>
             </tr>
         </table>
+        <div class="reviewcontainer">
+           <strong>Write a Review : </strong> 
+            <form action="review.php" method="post">
+                <textarea name="comment" id="commentarea" cols="10" rows="3" maxlength="100"></textarea>
+                <input type="hidden" value="<?php echo $_GET['id'] ?>" name="app_id">
+
+                <input type="submit" value="Post" class="postbtn">
+            </form>
+        </div>
+        <div class="commentscontainer">
+        <?php 
+            $sql = "SELECT * FROM review WHERE app_id = $appid";
+            $result = mysqli_query($conn,$sql);
+            if($result){
+                while($row = mysqli_fetch_array($result)){
+        ?>
+        
+             <div class="comments">
+                <strong> <?php echo $row['email'] ?> </strong>
+                <hr>
+            <p><?php echo $row['comment'] ?></p>
+            </div>
+        
+
+        <?php }
+                } ?>
+       </div>
         
         <footer>
             <h3>&copy MLB_07.01.06</h3>

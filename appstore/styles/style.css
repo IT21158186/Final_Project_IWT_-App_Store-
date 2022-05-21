@@ -22,6 +22,9 @@ body{
     margin: 10px auto;
     
 }
+#active{
+    color:black;
+}
 .navcontainer img:hover{
     filter:grayscale(0) saturate(4);
 }

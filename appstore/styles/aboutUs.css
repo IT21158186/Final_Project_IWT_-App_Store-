@@ -2,7 +2,7 @@
     margin: 0;
     padding:0;
     box-sizing: bolder-box;
-    font-family: Arial, Helvetica, sans-serif,cursive;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -91,56 +91,6 @@ h1 {
 .scm a:hover {
    color: #0196e3;
 }
-
-/*navigation bar*/
-
-.navcontainer{
-    background-color: mediumslateblue;
-    color: aliceblue;
-    display: flex;
-}
-.navcontainer li{
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-.navcontainer ul{
-    list-style-type: none;
-    margin: 10px auto;
-    
-}
-.navcontainer img:hover{
-    filter:grayscale(0) saturate(4);
-}
-.navcontainer a{
-    text-decoration: none;
-    font-weight: bold;
-    color: aliceblue;
-}
-.navcontainer a:hover{
-    color: black;
-}
-.search{
-    padding: 8px;
-    width:30vw;
-    border:none;
-    outline: none;
-    float: left;
-}
-.searchbtn{
-    padding: 8px 16px;
-    background-color: azure;
-    border: none;
-    cursor: pointer;
-    float: left;
-    
-}
-.login a{
-    position: absolute;
-    right: 5px;
-    top: 12px;
-}
-
 /*footer*/
 
 footer{

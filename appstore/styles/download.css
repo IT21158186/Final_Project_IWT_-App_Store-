@@ -4,7 +4,6 @@
     margin: 10px auto;
     background-color: white;
     border-radius: 5px;
-    margin-bottom: 20vh;
 }
 .downcontainer img{
     display: inline-block;
@@ -40,3 +39,62 @@
 .desc{
     margin-top: 3%;
 }
+/*Review*/
+.reviewcontainer{
+    width: 80%;
+    height: 180px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    color: gray;
+
+}
+.reviewcontainer strong{
+    display: block;
+    margin-top: 10px;
+
+}
+#commentarea{
+    position: relative;
+    width: 94%;
+    margin: 10px auto 10px 3%;
+    border: 1px solid grey;
+}
+.postbtn{
+    position: absolute;
+    display: block;
+    background-color: coral;
+    border-radius: 5%;
+    padding: 10px 20px;
+    right: 15px;
+}
+.comments{
+    display: block;
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    /*position: relative;*/
+    color: gray;
+    padding-top: 10px;
+    border: 1px solid rgba(145, 145, 145, 0.5);
+
+}
+.comments strong{
+    margin: 10px auto 20px 10px;
+}
+.comments hr{
+    border: 1px solid rgba(145, 145, 145,0.2);
+    margin-top: 10px;
+}
+.comments p{
+    color:gray;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px auto auto 19px;
+}
+.commentscontainer{
+    margin-bottom: 20px;
+}
+

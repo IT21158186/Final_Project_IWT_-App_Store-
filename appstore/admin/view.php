@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config.php';
 session_start();
 $appid = $_GET['id'];
 $query = "SELECT * FROM apps a, developer d, catergory c where a.app_id=$appid and d.developer_id = a.developer_id and c.cat_id = a.cat_id";
@@ -11,8 +11,8 @@ $row = mysqli_fetch_assoc($result);
 <html>
     <head>
         <title>Home | AppsyStore</title>
-        <link rel="stylesheet" href="styles/download.css">
-        <link rel="stylesheet" href="styles/dashstyle.css">
+        <link rel="stylesheet" href="../styles/download.css">
+        <link rel="stylesheet" href="../styles/dashstyle.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,24 +21,24 @@ $row = mysqli_fetch_assoc($result);
     </head>
     <body>
         <div class="navcontainer">
-            <img src="images/logo.png" alt="logo" width="auto" height="50px">
+            <img src="../images/logo.png" alt="logo" width="auto" height="50px">
             <nav>
             <ul>
-                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li><a href="admin.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
                     <li><a href="uploadapp.php">Upload App</a></li>
                     <li><a href="aboutusdev.php">About us</a></li>
                     
                     <li>
-                        <p>Hello,<?php 
-                            if(isset($_SESSION['company_name']))
-                                echo $_SESSION['company_name']; ?>
+                        <p>Welcom Admin,<?php 
+                            if(isset($_SESSION['admin_name']))
+                                echo $_SESSION['admin_name']; ?>
                         </p>
                     </li>
                     
                     <div class="login">
                     <?php
-                        if(isset($_SESSION['company_name'])){
-                            echo '<a href="logout.php" id="logout">Log out</a>';
+                        if(isset($_SESSION['admin_name'])){
+                            echo '<a href="../logout.php" id="logout">Log out</a>';
                         }
                     ?>
                     </div> 
@@ -50,7 +50,7 @@ $row = mysqli_fetch_assoc($result);
         
         <table class="downcontainer">
             <tr>
-                <td rowspan="3" class="appimg"><img src="images/<?php echo  $row['app_image'] ?>" alt="app image"></td>
+                <td rowspan="3" class="appimg"><img src="../images/<?php echo  $row['app_image'] ?>" alt="app image"></td>
                 <td><h2 class="title"><?php echo $row['app_name'] ?></h2></td>
             </tr>
             <tr>

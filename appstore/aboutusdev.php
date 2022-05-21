@@ -6,55 +6,52 @@ include 'config.php';
 <html>
 	<head>
 		<title> About page </title>
+		<link rel="stylesheet" href="styles/dashstyle.css">
 		<link rel="stylesheet" href="styles/aboutUs.css">
-		<link rel="stylesheet" href="styles/style.css">
 		<script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+		<!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet"> 
 	</head>
 	
 	<body>
-		<!--navigation bar-->
+
         <div class="navcontainer">
             <img src="images/logo.png" alt="logo" width="auto" height="50px">
             <nav>
-                <ul>
-                    <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
-<<<<<<< HEAD
-                    <li><a href="">Apps</a></li>
-                    <li><a href="">Games</a></li>
-                    <li><a href="contactUs.php">Contact us</a></li>
-                    <li><a href="aboutUs.php">About us</a></li>
-=======
-                    <li><a href="app.php">Apps</a></li>
-                    <li><a href="game.php">Games</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="aboutUs.php" id="active">About us</a></li>
->>>>>>> a9f5458545f4525d0d23b6e8f64a836f939446ef
-                    <li>
-                        <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
-                        <input type="submit" value="Search" class="searchbtn"></form>
-                    </li>
+				<ul>
+                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li><a href="uploadapp.php">Upload App</a></li>
+                    <li ><a href="aboutusdev.php" id="active">About us</a></li>
+                    
                     <li>
                         <p>Hello,<?php 
-                            if(isset($_SESSION['first_name']))
-                                echo $_SESSION['first_name'] ?>
+                            if(isset($_SESSION['company_name']))
+                                echo $_SESSION['company_name']; ?>
                         </p>
                     </li>
+                    
                     <div class="login">
                     <?php
-                        if(isset($_SESSION['first_name'])){
+                        if(isset($_SESSION['company_name'])){
                             echo '<a href="logout.php" id="logout">Log out</a>';
-                        }else
-                            echo '<a href="login.php" id="logout">Log in</a>';
+                        }
                     ?>
                     </div> 
-                </ul>  
+                </ul>    
                 
             </nav>
             
         </div>
 
+
+
+
+
 		<h1>Our Team</h1>
+		<div class="slideshow-container">
 			<div class="team">
 				<!--person 1-->
 				<div class="card">
@@ -92,7 +89,7 @@ include 'config.php';
 					</div>
 				</div>
 			
-				<!--person 3-->
+			<!--person 3-->
 				<div class="card">
 					<div class="content">
 						<div class="image">
@@ -146,12 +143,21 @@ include 'config.php';
 					</div>
 				</div>
 			</div>
-		<br>
+			
+			<br>
+			
+			<div class="history">
+				<h1>History</h1>
+				<p> </p>		
+			</div>
+		</div>
 
+		    
         <footer>
             <h3>&copy MLB_07.01_06</h3>
             <h4>All Right Reserved</h4>
         </footer>
+		
 		
 	</body>
 </html>
