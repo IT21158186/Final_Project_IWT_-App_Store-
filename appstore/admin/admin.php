@@ -24,6 +24,7 @@ if($_SESSION['email']){
                     <li ><a href="admin.php" id="active"><i class="fa-solid fa-house" ></i> Dashboard</a></li>
                     <li><a href="manage_app.php">Manage Apps</a></li>
                     <li><a href="manage_user.php">Manage Users</a></li>
+                    <li><a href="manage_dev.php">Manage Developers</a></li>
                     
                     <li>
                         <p>Welcome, Admin <?php 
