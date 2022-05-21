@@ -143,4 +143,31 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+.box{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 210px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+hr{
+    border: 3px;
+}
+.box h3{
+    padding: 10px 20px;
+}
+.box h4{
+    position: relative;
+    vertical-align: middle;
+    padding-top: 10%;
+    font-size: 72px;
+}
+.boxcontainer{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
 

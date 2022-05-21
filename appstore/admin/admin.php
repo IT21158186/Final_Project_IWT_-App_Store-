@@ -56,6 +56,35 @@ if($_SESSION['email']){
             </p>
         
         <!--Dashboard implementation is here-->
+        <div class="boxcontainer">
+            <div class="box" style="background-color: rgb(134, 255, 107);">
+                <?php 
+                    $sql = "SELECT * FROM apps";
+                    $result =mysqli_num_rows (mysqli_query($conn,$sql));
+                    echo "<h3>Apps</h3>";
+                    echo "<hr>";
+                    echo "<h4>$result</h4>"
+                ?>     
+        </div>
+        <div class="box" style="background-color:rgb(255, 161, 161) ;">
+                 <?php 
+                    $sql = "SELECT * FROM reg_users";
+                    $result =mysqli_num_rows (mysqli_query($conn,$sql));
+                    echo "<h3>Users</h3>";
+                    echo "<hr>";
+                    echo "<h4>$result</h4>"
+                ?> 
+        </div>
+        <div class="box" style="background-color:rgb(161, 195, 255);">
+                <?php 
+                    $sql = "SELECT * FROM developer";
+                    $result =mysqli_num_rows (mysqli_query($conn,$sql));
+                    echo "<h3>developer</h3>";
+                    echo "<hr>";
+                    echo "<h4>$result</h4>"
+                ?> 
+        </div>
+        </div>
         
             
         <footer>
@@ -68,6 +97,6 @@ if($_SESSION['email']){
 
 
 <?php }else{
-    header("Location:devlogin.php?error= Please Login !");
+    header("Location:index.php?error= Please Login !");
 } ?>
 

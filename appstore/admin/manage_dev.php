@@ -57,7 +57,7 @@ if($_SESSION['email']){
         
         <!--Dashboard implementation is here-->
         <table class="dashboardform">
-        <caption>Manage Users :</caption> 
+        <caption>Manage Developers :</caption> 
         <thead>
             <tr>
                 <td colspan="4"><center><b>Applications</b></center></td>
