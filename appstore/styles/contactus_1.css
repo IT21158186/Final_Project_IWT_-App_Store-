@@ -1,0 +1,107 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.conform{
+    width: 50%;
+    height: 70vh;
+    margin: 2% auto 4% auto;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.conInfo{
+    margin: 7% auto auto 7%;
+    background-color: mediumslateblue;
+    width: 350px;
+    height: auto;
+    position: absolute;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.conInfo li{
+    margin-top:30px;
+}
+.conInfo h2{
+    color: white;
+    margin-bottom: 20px;
+}
+.conInfo .text{
+    padding-left: 10px;
+    text-align: left;
+}
+.text:hover{
+    color: white;
+    cursor: pointer;
+}
+.conform * {
+    margin-left: 10%;
+}
+.info i{
+    font-size: large;
+    color: rgb(255, 255, 255);
+}
+.info, .socm{
+    list-style: none;
+    margin-top: 20px;
+}
+
+/*Social media icons*/
+.socm i{
+    font-size: x-large;
+    /*color:rgba(255, 31, 31, 1) ;*/
+}
+section .contact .conInfo .socm {
+    position: relative;
+    display: flex;
+}
+
+section .contact .conInfo .socm li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+section .contact .conInfo .socm li a  {
+    text-decoration: none;
+
+}
+
+section .contact .conInfo .socm li a i {
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+section .contact .conInfo .socm li:hover a i {
+    opacity: 1;
+}
+
+/* Send msg form*/
+.conform form{
+    position: relative;
+    top: 40px;
+    left: 40px;
+    color: darkblue;
+
+}
+.field{
+    width: 300px;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+.field ::placeholder{
+    font-size: medium;
+}
+.btn{
+    margin-top: 20px;
+    margin-left: 40%;
+    padding:15px 30px;
+    background-color: darkblue;
+    display: block;
+    border: none;
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(9, 9, 119);
+    cursor: pointer;
+}

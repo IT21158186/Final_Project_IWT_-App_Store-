@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Contact Us</title>
-        <link rel="stylesheet" href="styles/contactUs.css">
+        <link rel="stylesheet" href="styles/contactus_1.css">
+        <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <body> 
@@ -45,20 +46,19 @@
             <!--Contact Info-->
             <div class="contact"> 
                 <div class="conInfo"> 
-                    <div>
                         <h2> Contact Us </h2>
                         <ul class="info"> 
                             <li>
-                                <span><i class='fas fa-map-marker-alt' style='font-size:48px;color:red'></i></span>
-                                <span>SLIIT Malabe Campus, New Kandy Road, Malabe.</span>
+                                <span><i class='fas fa-map-marker-alt'></i></span>
+                                <span class="text">SLIIT Malabe, New Kandy Road</span>
                             </li>
                             <li>
-                                <span><i class="fa fa-envelope" style="font-size:48px;color:red"></i></span>
-                                <span>appsyStore@gmail.lk</span>
+                                <span><i class="fa fa-envelope"></i></span>
+                                <span class="text">appsyStore@gmail.lk</span>
                             </li>
                             <li>
-                                <span><i class="fa fa-phone" style="font-size:48px;color:red"></i></span>
-                                <span>0710125385</span>
+                                <span><i class="fa fa-phone"></i></span>
+                                <span class="text">0710125385</span>
                             </li>
                         </ul> 
                         <ul class="socm">
@@ -68,38 +68,37 @@
                             <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
-                    </div>
                 </div>
-                <div class="conform"> 
-                    <h2>Send a message</h2>
-                    <div class="fbox"> 
-                        <div class="inputbx"> 
-                            <input type="text" name="" required>
-                            <label>First Name</label>
-                        </div>
-                        <div class="inputbx">
-                            <input type="text" name="" required>
-                            <label>Last Name</label>
-                        </div>
-                        <div class="inputbx">
-                            <input type="text" name="" required>
-                            <label>Email</label>
-                        </div>
-                        <div class="inputbx">
-                            <input type="text" name="" required>
-                            <label>Mobile Number</label>
-                        </div>
-                        <div class="inputbx">
-                            <textarea name="" required></textarea>
-                            <span>Write your message here...</span>
-                        </div>
-                        <div class="inputbx">
-                            <input type="submit" value="Send">
-                        </div>
-                    </div>
+                <div class="conform">   
+                    <form action="">
+                            <h2>Send a message</h2>
+                            <div class="inputbx"> 
+                                <input type="text" name="" placeholder="First Name" class="field" required>
+                            </div>
+                            <div class="inputbx">
+                                <input type="text" name="" placeholder="Last Name" class="field"  required>
+                            </div>
+                            <div class="inputbx">
+                                <input type="text" name="" placeholder="Email" class="field" required>   
+                            </div>
+                            <div class="inputbx">
+                                <input type="text" name="" placeholder="Mobile Number" class="field" required>
+                            </div>
+                            <div class="inputbx">
+                                <textarea name="" required placeholder="Write your message here..." class="field"></textarea>
+                            </div>
+                                <input type="submit" value="Send" class="btn">
+                            
+                       
+                    </form>
+                    
                 </div>
             </div>
-        </section>       
+        </section>    
+        <footer>
+            <h3>&copy MLB_07.01_06</h3>
+            <h4>All Right Reserved</h4>
+        </footer>   
     </body>
 
 
