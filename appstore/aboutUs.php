@@ -62,7 +62,7 @@ include 'config.php';
 						</div>
 						<div class="contentBx">
 							<h4>Sandali Vimansa</h4>
-							<h5>bla bla bla</h5>
+							<h5>Director</h5>
 						</div>
 						<div class="scm">
 							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -80,7 +80,7 @@ include 'config.php';
 						</div>
 						<div class="contentBx">
 							<h4>Dewmi Herath</h4>
-							<h5>bla bla bla</h5>
+							<h5>Director</h5>
 						</div>
 						<div class="scm">
 							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -116,7 +116,7 @@ include 'config.php';
 						</div>
 						<div class="contentBx">
 							<h4>Nimsara Mahagedara</h4>
-							<h5>bla bla bla</h5>
+							<h5>Director</h5>
 						</div>
 						<div class="scm">
 							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -134,7 +134,7 @@ include 'config.php';
 						</div>
 						<div class="contentBx">
 							<h4>Uresh Pinidiya</h4>
-							<h5>bla bla bla</h5>
+							<h5>Director</h5>
 						</div>
 						<div class="scm">
 							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
