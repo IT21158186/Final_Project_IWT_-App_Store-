@@ -19,17 +19,10 @@ include 'config.php';
             <nav>
                 <ul>
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
-<<<<<<< HEAD
-                    <li><a href="">Apps</a></li>
-                    <li><a href="">Games</a></li>
-                    <li><a href="contactUs.php">Contact us</a></li>
-                    <li><a href="aboutUs.php">About us</a></li>
-=======
                     <li><a href="app.php">Apps</a></li>
                     <li><a href="game.php">Games</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="aboutUs.php" id="active">About us</a></li>
->>>>>>> a9f5458545f4525d0d23b6e8f64a836f939446ef
+                    <li><a href="contactUs.php">Contact us</a></li>
+                    <li><a id="active" href="aboutUs.php">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
                         <input type="submit" value="Search" class="searchbtn"></form>
