@@ -19,8 +19,8 @@ include 'config.php';
             <nav>
                 <ul>
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="">Apps</a></li>
-                    <li><a href="">Games</a></li>
+                    <li><a href="app.php">Apps</a></li>
+                    <li><a href="game.php">Games</a></li>
                     <li><a href="">Contact us</a></li>
                     <li><a href="aboutUs.php" id="active">About us</a></li>
                     <li>

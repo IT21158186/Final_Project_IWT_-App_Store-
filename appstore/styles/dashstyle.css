@@ -105,10 +105,9 @@ body h3{
         display: block;
     }
 }
-
 .dashboardform{
     background-color: white;
-   width: 70%;
+    width: 70%;
     margin: 5% auto;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -143,3 +142,5 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 .downcontainer{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+
+
