@@ -75,7 +75,6 @@ if($_SESSION['email']){
             $result = mysqli_query($conn,$sql);
             if(!empty($result)){
             while($row = mysqli_fetch_array($result)){
-                $email = $row['email'];
             ?>
 
             <tr>
@@ -83,7 +82,7 @@ if($_SESSION['email']){
                 
                 <td><?php echo $row['company_name'] ?></td>
                 <td><?php echo $row['mobile'] ?></td><!-- Add here the rating code-->
-                <td><div class="smallbtncontainer"><a href="remove.php?email=<?php echo $email ?>" class="smallbtn" value="">Remove</a>
+                <td><div class="smallbtncontainer"><a href="remove_dev.php?developer_id=<?php echo $row['developer_id'] ?>" class="smallbtn" value="">Remove</a>
                 <a href="view.php?id=<?php echo $email ?>" class="smallbtn" value="">View</a></div></td>
             </tr>
 

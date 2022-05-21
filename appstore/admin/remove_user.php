@@ -1,5 +1,4 @@
 <?php
-//Copy of developer dashboard
 session_start();
 include "../config.php";
 if($_SESSION['email']){
@@ -8,6 +7,7 @@ if($_SESSION['email']){
 <html>
     <head>
         <title>Upload App | AppsyStore</title>
+        <link rel="stylesheet" href="../styles/confirm_msg.css">
         <link rel="stylesheet" href="../styles/dashstyle.css">
         <link rel="stylesheet" href="../styles/uploadform.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@ if($_SESSION['email']){
                     <li><a href="manage_dev.php">Manage Developers</a></li>
                     
                     <li>
-                        <p>Welcome, Admin <?php 
+                        <p>Hello,<?php 
                             if(isset($_SESSION['admin_name']))
                                 echo $_SESSION['admin_name']; ?>
                         </p>
@@ -45,54 +45,51 @@ if($_SESSION['email']){
             </nav>
             
         </div>
-        <?php 
-            if(isset($_GET['error'])){
+        <!--Confirm message is here-->
+        <?php
+        if(!isset($_SESSION['target_email'])){
+             $_SESSION['target_email'] = $_GET['email'];
+        } 
         ?>
-            <p class="error">
-                <?php 
-                    echo $_GET['error'];
-                }
-            ?>
-            </p>
+        <div class="confirm_msg">
+            <div class="msgcontainer">
+                <p>Are You Sure to Permenently Delete this app ?</p>
+                        <div class="btncontainer">
+                            <center>
+                                <a href="remove_user.php?state=1" class="smallbtn">Yes</a>
+                                <a href="admin.php" class="smallbtn">No</a>
+                            </center>
+                            
+                        </div>
+            </div>
+                        
+                        
+
+        </div>
+        <?php 
+        if(isset($_GET['state'])){
+            $target_email = $_SESSION['target_email'];
+            $_SESSION['target_email'] = null;
+
+            $sql = "DELETE FROM review WHERE email = '$target_email'";
+            $sql2 = "DELETE FROM reg_users WHERE email = '$target_email' "; 
         
-        <!--Dashboard implementation is here-->
-        <table class="dashboardform">
-        <caption>Manage Users :</caption> 
-        <thead>
-            <tr>
-                <td colspan="4"><center><b>Applications</b></center></td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <th>Name</th>
-                <th>Mobile</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            $sql = "SELECT * FROM reg_users";
-            $result = mysqli_query($conn,$sql);
-            if(!empty($result)){
-            while($row = mysqli_fetch_array($result)){
-                $email = $row['email'];
-            ?>
-
-            <tr>
-                <td><?php echo $row['email']?></td>
-                
-                <td><?php echo $row['first_name'] ?></td>
-                <td><?php echo $row['mobile_no'] ?></td><!-- Add here the rating code-->
-                <td><div class="smallbtncontainer"><a href="remove_user.php?email=<?php echo $email ?>" class="smallbtn" value="">Remove</a>
-                <a href="view.php?id=<?php echo $email ?>" class="smallbtn" value="">View</a></div></td>
-            </tr>
-
-            <?php 
+            if(mysqli_query($conn,$sql)){
+                if(mysqli_query($conn,$sql2)){
+                    header("Location: manage_user.php?error=User Removed Successfully !");
+                    exit();
+                }
+                header("Location: manage_user.php?error=User Remove ERROR !");
+                exit();
+            }else{
+                header("Location: manage_user.php?error=Removing Reviews ERROR !");
+                exit();
             }
-                } ?>
-        </tbody>
-        </table>
-            
+        }
+        ?>
+        
+        
+        
         <footer>
             <h3>&copy MLB_07.01_06</h3>
             <h4>All Right Reserved</h4>
