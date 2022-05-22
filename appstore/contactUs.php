@@ -5,7 +5,8 @@
         <link rel="stylesheet" href="styles/contactus_1.css">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
+    </head>
     <body> 
         <!--navigation Bar-->
         <div class="navcontainer">
