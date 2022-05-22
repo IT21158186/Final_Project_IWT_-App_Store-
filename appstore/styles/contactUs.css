@@ -144,7 +144,7 @@ section .contact .conform h2 {
 section .contact .conform .fbox {
     position: relative;
     display: flex;
-    justify-content: space-between;
+   justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 30px;
 }
