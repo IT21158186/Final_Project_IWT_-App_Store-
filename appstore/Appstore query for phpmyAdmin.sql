@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 06:12 PM
+-- Generation Time: May 22, 2022 at 07:37 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -39,11 +39,11 @@ CREATE TABLE `administrator` (
 --
 
 INSERT INTO `administrator` (`admin_id`, `admin_name`, `email`, `password`) VALUES
-(101, 'Ad.Pinsara', 'pinsara@gmail.com', 'Pinsara1234'),
-(202, 'Ad.Dewmi', 'dewmi@gmail.com', 'dewmi1234'),
-(303, 'Ad.Uresh', 'uresh@gmail.com', 'uresh1234'),
-(404, 'Ad.Nimsara', 'nimsara@gmail.com', 'nimsara1234'),
-(505, 'Ad.Sandali', 'sandali@gmail.com', 'sandali1234');
+(101, 'Deneth', 'pinsara@gmail.com', 'pinsara1234'),
+(202, 'Dewmi', 'dewmi@gmail.com', 'dewmi1234'),
+(303, 'Uresh', 'uresh@gmail.com', 'uresh1234'),
+(404, 'Nimsara', 'nimsara@gmail.com', 'nimsara1234'),
+(505, 'Sandali', 'sandali@gmail.com', 'sandali1234');
 
 -- --------------------------------------------------------
 
@@ -66,17 +66,30 @@ CREATE TABLE `apps` (
 --
 
 INSERT INTO `apps` (`app_id`, `app_name`, `description`, `developer_id`, `cat_id`, `file_path`, `app_image`) VALUES
-(1, 'Snapchat', 'Chat with friend and family', 1, 100, 'Snap.apk', 'Snap.png'),
-(2, 'Whatsapp', 'Lets Whatsapp each other', 2, 100, '2.apk', '2.png'),
-(3, 'Facebook', 'Lets Connect the world together', 3, 100, '3.apk', '3.png'),
-(4, 'COC', 'Clash of Clans is a 2012 free-to-play mobile strat', 4, 200, 'COC.apk', 'COC.png'),
-(6, 'EduAPP', 'Education together', 5, 400, '6.apk', '6.png'),
-(7, 'MyBooks', 'Educational Books App', 1, 400, 'Book.txt', 'books-icon.png'),
-(8, 'G.Class', 'D. Class is part of the G Suite for Education (for', 1, 400, 'G.class.apk', '8.png'),
-(9, 'COD Mobile', 'Call of Duty: Mobile is a free-to-play shooter gam', 4, 200, 'COD Mobile.apk', 'COD Mobile.png'),
-(10, 'Asphalt 9', 'Asphalt 9: Legends is a 2018 racing video game dev', 4, 200, 'Asphalt.apk', 'Asphalt.png'),
-(11, 'Crypto', 'This Wallet is the official crypto wallet of Binan', 5, 300, 'Crypto.apk', 'Crypto.png'),
-(12, 'X Player', 'XPlayer supports setting passwords for your privat', 2, 500, 'X Player.apk', 'X Player.png');
+(14, 'Avaira', '--Virus Guard--', 1, 100, 'Avira.apk', 'Avira.png'),
+(15, 'Avast', '--Virus Guard--', 1, 100, 'Avast.apk', 'Avast.png'),
+(16, 'Facebook', '--Social media application-- ', 1, 100, 'fb (2).apk', 'FB.png'),
+(17, 'Helakuru', '--Sinhala Keyboard--', 1, 100, 'Helakuru.apk', 'Helakuru.png'),
+(18, 'OperaMini', '--Web browser--', 1, 100, 'Opera.apk', 'opera.png'),
+(19, 'Bapp', '--BOC online banking app--', 2, 300, 'B App.apk', 'B App.png'),
+(20, 'Crypto', '--e-Crypto exchange wallet--', 2, 300, 'Crypto.apk', 'Crypto.png'),
+(21, 'e-Seylan', '--Seylan bank online app--', 2, 300, 'Seylan.apk', 'Seylan.png'),
+(22, 'E- Banking', '--Online transaction platform--', 2, 300, 'ebanking.apk', 'EBanking.png'),
+(23, 'Worldbank', '--World bank online app--', 2, 300, 'World bank.apk', 'Worldbank.png'),
+(24, 'Asphalt 9', '--Racing game new update--', 3, 200, 'Asphalt.apk', 'Asphalt.png'),
+(25, 'COC', '--Clash of clans - strategy game--', 3, 200, 'COC.apk', 'COC.png'),
+(26, 'COD Mobile', '--Call of Duty mobile game apk--', 3, 200, 'COD Mobile.apk', 'COD Mobile.png'),
+(27, 'Edu App', '--Educational apk for uni students--', 4, 400, '6.apk', '6.png'),
+(28, 'My Book', '--E- Book Browser--', 4, 400, 'books.apk', 'books.png'),
+(29, 'MySchool', '--Online school learning app--', 4, 400, 'Myscl.apk', 'Myschool.png'),
+(30, 'G.Class', '--Google classroom apk--', 4, 400, 'G.class.apk', 'G. class.png'),
+(31, 'Snapchat', '--Photo filters and editing app--', 5, 500, 'Snap.apk', 'Snap.png'),
+(32, 'Spotify', '--Online mp3 Player--', 5, 500, 'Spotify.apk', 'Spotify.png'),
+(33, 'VLC Player', '--mp3, mp4 Media player--', 5, 500, 'VLC.apk', 'VLC.png'),
+(34, 'X Player', '--mp4, 4K video player--', 5, 500, 'X Player.apk', 'X Player.png'),
+(35, 'Youtube', '--Video streaming browser--', 5, 500, 'YT.apk', 'YT.png'),
+(36, 'Whatsapp', '--Online messaging app--', 5, 100, 'Whatsapp.apk', 'Whatsapp.png'),
+(37, 'FireFox', '--internet browser--', 5, 100, 'firefox.apk', 'firefox.png');
 
 -- --------------------------------------------------------
 
@@ -120,11 +133,11 @@ CREATE TABLE `developer` (
 --
 
 INSERT INTO `developer` (`developer_id`, `company_name`, `about`, `email`, `password`, `mobile`) VALUES
-(1, 'SLIIT', 'Professional App Maker Focused on Desiging Apps', '0001sliit@mail.com', 'sliit1122', NULL),
-(2, 'CINEC', 'Android App developer', '0002cinec@mail.com', 'cinec1122', NULL),
-(3, 'NSBM', 'Game developer', '0003nsbm@mail.com', 'nsbm1122', NULL),
-(4, 'NIBM', 'Computer architecture', '0004nibm@mail.com', 'nibm1122', NULL),
-(5, 'SIBA', 'Cyber sequrity App Maker', '0005siba@mail.com', 'siba1122', NULL);
+(1, 'Activision', 'Professional App Maker Focused on Desiging Apps', 'activision@mail.com', '12345', '076 9379809'),
+(2, 'Rooster', 'Android App developer', 'rooster@mail.com', '12345', '0763355762'),
+(3, 'Ubisoft', 'Game developer', 'ubisoft@mail.com', '12345', '0713311593'),
+(4, 'Hyke', 'Computer architecture', 'hyke@mail.com', '12345', '0703612338'),
+(5, 'Supercell', 'Cyber sequrity App Maker', 'supercell@mail.com', '12345', '0713694485');
 
 -- --------------------------------------------------------
 
@@ -142,13 +155,11 @@ CREATE TABLE `rating` (
 --
 
 INSERT INTO `rating` (`app_id`, `rate`) VALUES
-(1, 7),
-(2, 8),
-(3, 9),
-(4, 16),
-(8, 4),
-(10, 5),
-(11, 3);
+(15, 3),
+(19, 4),
+(25, 5),
+(32, 3),
+(36, 4);
 
 -- --------------------------------------------------------
 
@@ -193,14 +204,11 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`app_id`, `email`, `rating`, `comment`) VALUES
-(1, 'mahagedara@mail.com', 4, 'it is a very Cool App'),
-(1, 'pinsara@mail.com', 5, ''),
-(2, 'pinidiya96@mail.com', 5, 'Super chat app'),
-(4, 'vimansa@mail.com', 2, 'Not good'),
-(8, 'pinsara@mail.com', 4, ''),
-(10, 'pinsara@mail.com', 5, 'Excellent!!!!!!!'),
-(11, 'pinsara@mail.com', 3, 'So valuable..'),
-(12, 'pinsara@mail.com', 4, 'A best player');
+(15, 'pinsara@mail.com', 3, ''),
+(19, 'pinsara@mail.com', 4, ''),
+(25, 'pinsara@mail.com', 5, 'Best strategy game '),
+(32, 'pinsara@mail.com', 3, ''),
+(36, 'pinsara@mail.com', 4, '');
 
 --
 -- Indexes for dumped tables
@@ -260,7 +268,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `apps`
 --
 ALTER TABLE `apps`
-  MODIFY `app_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `app_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Constraints for dumped tables
