@@ -44,14 +44,14 @@ session_start()
             
         </div>
         <br/>
-        <h3>Popular :</h3>
+        <h3>Popular Apps :</h3>
         <div class="container">
             <?php
-                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id ORDER BY RAND()";
+                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100 and 300 and 400 and 500 ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
                 $count = 0;
                 while($row = mysqli_fetch_array($result)){
-                    if($count >= 11){
+                    if($count >= 22){
                         break;
                     }
             ?>
@@ -64,10 +64,10 @@ session_start()
         <?php $count++; } ?>
            
         </div>
-        <h3>Apps :</h3>
+        <h3>Related Apps :</h3>
         <div class="container">
             <?php
-                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100 ORDER BY RAND()";
+                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100 and 300 and 400 and 500 ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
                 $count = 0;
                 while($row = mysqli_fetch_array($result)){
@@ -84,7 +84,70 @@ session_start()
         <?php $count++;} ?>
            
         </div>
+
+        <h3>Commercial Apps :</h3>
+        <div class="container">
+            <?php
+                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 300 ORDER BY RAND()";
+                $result = mysqli_query($conn,$query);
+                $count = 0;
+                while($row = mysqli_fetch_array($result)){
+                    if($count >= 22){
+                        break;
+                    }?>
+            
+            <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
+                <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
+                <h4><?php echo $row['app_name'] ?></h4>
+                <h5><?php echo $row['company_name']?></h5>
+                </a>
+
+        <?php $count++;} ?>
+           
         
+        </div>
+        <h3>Educational Apps :</h3>
+        <div class="container">
+            <?php
+                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 400 ORDER BY RAND()";
+                $result = mysqli_query($conn,$query);
+                $count = 0;
+                while($row = mysqli_fetch_array($result)){
+                    if($count >= 22){
+                        break;
+                    }?>
+            
+            <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
+                <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
+                <h4><?php echo $row['app_name'] ?></h4>
+                <h5><?php echo $row['company_name']?></h5>
+                </a>
+
+        <?php $count++;} ?>
+           
+        </div>
+
+        <h3>Media Apps :</h3>
+        <div class="container">
+            <?php
+                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 500 ORDER BY RAND()";
+                $result = mysqli_query($conn,$query);
+                $count = 0;
+                while($row = mysqli_fetch_array($result)){
+                    if($count >= 22){
+                        break;
+                    }?>
+            
+            <a href="download.php?action=add&id=<?php echo $row['app_id']?>" class="item">
+                <img src="images/<?php echo $row['app_image']?>" alt="appimage" width="100px">
+                <h4><?php echo $row['app_name'] ?></h4>
+                <h5><?php echo $row['company_name']?></h5>
+                </a>
+
+        <?php $count++;} ?>
+           
+        </div>
+
         <footer>
             <h3>&copy MLB_07.01_06</h3>
             <h4>All Right Reserved</h4>

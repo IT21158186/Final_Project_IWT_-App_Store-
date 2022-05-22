@@ -12,6 +12,7 @@ $row = mysqli_fetch_assoc($result);
     <head>
         <title>Home | AppsyStore</title>
         <link rel="stylesheet" href="styles/download.css">
+        <link rel="stylesheet" href="styles/rating_style.css">
         <link rel="stylesheet" href="styles/style.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
     </head>
@@ -47,6 +48,9 @@ $row = mysqli_fetch_assoc($result);
             </nav>
             
         </div>
+        <?php if(isset($_GET['error'])){?>
+                    <p id='error'> <?php echo $_GET['error'];?></p>
+            <?php } ?>
         <br/>
         
         <table class="downcontainer">
@@ -69,8 +73,22 @@ $row = mysqli_fetch_assoc($result);
             </tr>
         </table>
         <div class="reviewcontainer">
-           <strong>Write a Review : </strong> 
             <form action="review.php" method="post">
+                <p id="total_votes"></p>
+                <div class="div">
+                    <input type="hidden" id="php1_hidden" value="1">
+                    <img src="images/star1.png" onmouseover="change(this.id);" id="php1" class="php">
+                    <input type="hidden" id="php2_hidden" value="2">
+                    <img src="images/star1.png" onmouseover="change(this.id);" id="php2" class="php">
+                    <input type="hidden" id="php3_hidden" value="3">
+                    <img src="images/star1.png" onmouseover="change(this.id);" id="php3" class="php">
+                    <input type="hidden" id="php4_hidden" value="4">
+                    <img src="images/star1.png" onmouseover="change(this.id);" id="php4" class="php">
+                    <input type="hidden" id="php5_hidden" value="5">
+                    <img src="images/star1.png" onmouseover="change(this.id);" id="php5" class="php">
+                </div>
+
+                <input type="hidden" name="phprating" id="phprating" value="0">
                 <textarea name="comment" id="commentarea" cols="10" rows="3" maxlength="100"></textarea>
                 <input type="hidden" value="<?php echo $_GET['id'] ?>" name="app_id">
 
@@ -83,10 +101,17 @@ $row = mysqli_fetch_assoc($result);
             $result = mysqli_query($conn,$sql);
             if($result){
                 while($row = mysqli_fetch_array($result)){
+                    $i = 0;
         ?>
         
              <div class="comments">
                 <strong> <?php echo $row['email'] ?> </strong>
+                <?php while($i < $row['rating']){
+                    echo '<span><img src="images/star2.png" width="15px" alt=""></span>';
+                    $i++;
+                }
+                 
+                 ?>
                 <hr>
             <p><?php echo $row['comment'] ?></p>
             </div>
@@ -100,6 +125,27 @@ $row = mysqli_fetch_assoc($result);
             <h3>&copy MLB_07.01.06</h3>
             <h4>All Right Reserved</h4>
         </footer>
+
+        <script type="text/javascript">
+  
+  function change(id)
+  {
+     var cname=document.getElementById(id).className;
+     var ab=document.getElementById(id+"_hidden").value;
+     document.getElementById(cname+"rating").value=ab;
+
+     for(var i=ab;i>=1;i--)
+     {
+        document.getElementById(cname+i).src="images/star2.png";
+     }
+     var id=parseInt(ab)+1;
+     for(var j=id;j<=5;j++)
+     {
+        document.getElementById(cname+j).src="images/star1.png";
+     }
+  }
+
+</script>
        
     </body>
 </html>

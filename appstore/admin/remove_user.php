@@ -47,8 +47,8 @@ if($_SESSION['email']){
         </div>
         <!--Confirm message is here-->
         <?php
-        if(!isset($_SESSION['appid'])){
-             $_SESSION['appid'] = $_GET['appid'];
+        if(!isset($_SESSION['target_email'])){
+             $_SESSION['target_email'] = $_GET['email'];
         } 
         ?>
         <div class="confirm_msg">
@@ -56,7 +56,7 @@ if($_SESSION['email']){
                 <p>Are You Sure to Permenently Delete this app ?</p>
                         <div class="btncontainer">
                             <center>
-                                <a href="remove.php?state=1" class="smallbtn">Yes</a>
+                                <a href="remove_user.php?state=1" class="smallbtn">Yes</a>
                                 <a href="admin.php" class="smallbtn">No</a>
                             </center>
                             
@@ -68,32 +68,23 @@ if($_SESSION['email']){
         </div>
         <?php 
         if(isset($_GET['state'])){
-            $appid = $_SESSION['appid'];
-            $_SESSION['appid'] = null;
-            $sql1 = "SELECT * FROM apps WHERE app_id = $appid";
-            $result = mysqli_fetch_assoc(mysqli_query($conn,$sql1));
-           
-            $sql = "DELETE FROM review WHERE app_id = $appid";
-            $sql2 = "DELETE FROM apps WHERE app_id = $appid "; 
-            // PHP program to delete a file named gfg.txt
-            // using unlink() function
-            $filepath = $result['file_path'];
-            $imgpath = $result['app_image'];
-            $image_pointer = "../images/$imgpath";
-            $file_pointer = "../uploads/$filepath";
-            
-            // Use unlink() function to delete a file
-            if (unlink($file_pointer)) {
-                unlink($image_pointer);
-                mysqli_query($conn,$sql);
-                mysqli_query($conn,$sql2);
-                header("Location: admin.php?error=$file_pointer has been deleted");
-            }
-            else {
-               header("Location: admin.php?error=$file_pointer cannot be deleted due to an error");
-            }
-            
+            $target_email = $_SESSION['target_email'];
+            $_SESSION['target_email'] = null;
 
+            $sql = "DELETE FROM review WHERE email = '$target_email'";
+            $sql2 = "DELETE FROM reg_users WHERE email = '$target_email' "; 
+        
+            if(mysqli_query($conn,$sql)){
+                if(mysqli_query($conn,$sql2)){
+                    header("Location: manage_user.php?error=User Removed Successfully !");
+                    exit();
+                }
+                header("Location: manage_user.php?error=User Remove ERROR !");
+                exit();
+            }else{
+                header("Location: manage_user.php?error=Removing Reviews ERROR !");
+                exit();
+            }
         }
         ?>
         

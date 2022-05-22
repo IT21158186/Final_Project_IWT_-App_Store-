@@ -8,7 +8,7 @@ if($_SESSION['email']){
 <html>
     <head>
         <title>Upload App | AppsyStore</title>
-        <link rel="stylesheet" href="../styles/dashstyle.css">
+        <link rel="stylesheet" href="../styles/admindash.css">
         <link rel="stylesheet" href="../styles/uploadform.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
         <!--Google Fonts-->
@@ -22,7 +22,7 @@ if($_SESSION['email']){
             <nav>
                 <ul>
                     <li ><a href="admin.php" ><i class="fa-solid fa-house" ></i> Dashboard</a></li>
-                    <li><a href="manage_app.php">Manae Apps</a></li>
+                    <li><a href="manage_app.php">Manage Apps</a></li>
                     <li><a href="manage_user.php" id="active">Manage Users</a></li>
                     <li><a href="manage_dev.php">Manage Developers</a></li>
                     
@@ -83,7 +83,7 @@ if($_SESSION['email']){
                 
                 <td><?php echo $row['first_name'] ?></td>
                 <td><?php echo $row['mobile_no'] ?></td><!-- Add here the rating code-->
-                <td><div class="smallbtncontainer"><a href="remove.php?email=<?php echo $email ?>" class="smallbtn" value="">Remove</a>
+                <td><div class="smallbtncontainer"><a href="remove_user.php?email=<?php echo $email ?>" class="smallbtn" value="">Remove</a>
                 <a href="view.php?id=<?php echo $email ?>" class="smallbtn" value="">View</a></div></td>
             </tr>
 

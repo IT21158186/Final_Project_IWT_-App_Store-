@@ -6,14 +6,16 @@
 }
 body{
     background-color: #f8f8f8;
+    background-size: cover;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url("../images/1.jpg");
 }
 nav{
     margin-left: 50px;
     margin-top: 4px;
 }
 .navcontainer{
-    background-color: white;
-    color: darkgray;
+    background-color: darkblue;
+    color:white;
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0,0, 0.2);
 }
@@ -85,14 +87,14 @@ nav{
 }
 .container a{
     text-decoration: none;
-    color: grey;
+    color: white;
 }
 
 footer{
     display: inline-block;
     position:fixed;
     bottom:0;
-    background-color: gray;
+    background-color: darkred;
     padding: 10px 0;
     width: 100%;
     text-align: center;
@@ -143,5 +145,33 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+.box{
+    background-color: rgba(11, 193, 249, 0.536);
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 210px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px) ;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+hr{
+    border: 3px;
+}
+.box h3{
+    padding: 10px 20px;
+}
+.box h4{
+    position: relative;
+    vertical-align: middle;
+    padding-top: 10%;
+    font-size: 72px;
+}
+.boxcontainer{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
 
 

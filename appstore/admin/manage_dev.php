@@ -8,7 +8,7 @@ if($_SESSION['email']){
 <html>
     <head>
         <title>Upload App | AppsyStore</title>
-        <link rel="stylesheet" href="../styles/dashstyle.css">
+        <link rel="stylesheet" href="../styles/admindash.css">
         <link rel="stylesheet" href="../styles/uploadform.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
         <!--Google Fonts-->
@@ -57,7 +57,7 @@ if($_SESSION['email']){
         
         <!--Dashboard implementation is here-->
         <table class="dashboardform">
-        <caption>Manage Users :</caption> 
+        <caption>Manage Developers :</caption> 
         <thead>
             <tr>
                 <td colspan="4"><center><b>Applications</b></center></td>
@@ -75,7 +75,6 @@ if($_SESSION['email']){
             $result = mysqli_query($conn,$sql);
             if(!empty($result)){
             while($row = mysqli_fetch_array($result)){
-                $email = $row['email'];
             ?>
 
             <tr>
@@ -83,7 +82,7 @@ if($_SESSION['email']){
                 
                 <td><?php echo $row['company_name'] ?></td>
                 <td><?php echo $row['mobile'] ?></td><!-- Add here the rating code-->
-                <td><div class="smallbtncontainer"><a href="remove.php?email=<?php echo $email ?>" class="smallbtn" value="">Remove</a>
+                <td><div class="smallbtncontainer"><a href="remove_dev.php?developer_id=<?php echo $row['developer_id'] ?>" class="smallbtn" value="">Remove</a>
                 <a href="view.php?id=<?php echo $email ?>" class="smallbtn" value="">View</a></div></td>
             </tr>
 

@@ -97,4 +97,8 @@
 .commentscontainer{
     margin-bottom: 20px;
 }
-
+#error{
+    margin: 10px auto 0px 10px;
+    color: green;
+    font-size: large;
+}

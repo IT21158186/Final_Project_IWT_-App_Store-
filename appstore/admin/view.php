@@ -12,7 +12,7 @@ $row = mysqli_fetch_assoc($result);
     <head>
         <title>Home | AppsyStore</title>
         <link rel="stylesheet" href="../styles/download.css">
-        <link rel="stylesheet" href="../styles/dashstyle.css">
+        <link rel="stylesheet" href="../styles/admindash.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">

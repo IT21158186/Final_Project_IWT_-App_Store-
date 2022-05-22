@@ -8,7 +8,7 @@ if($_SESSION['email']){
 <html>
     <head>
         <title>Upload App | AppsyStore</title>
-        <link rel="stylesheet" href="../styles/dashstyle.css">
+        <link rel="stylesheet" href="../styles/admindash.css">
         <link rel="stylesheet" href="../styles/uploadform.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
         <!--Google Fonts-->
@@ -56,6 +56,35 @@ if($_SESSION['email']){
             </p>
         
         <!--Dashboard implementation is here-->
+        <div class="boxcontainer">
+            <div class="box">
+                <?php 
+                    $sql = "SELECT * FROM apps";
+                    $result =mysqli_num_rows (mysqli_query($conn,$sql));
+                    echo "<h3>Apps</h3>";
+                    echo "<hr>";
+                    echo "<h4>$result</h4>"
+                ?>     
+        </div>
+        <div class="box" >
+                 <?php 
+                    $sql = "SELECT * FROM reg_users";
+                    $result =mysqli_num_rows (mysqli_query($conn,$sql));
+                    echo "<h3>Users</h3>";
+                    echo "<hr>";
+                    echo "<h4>$result</h4>"
+                ?> 
+        </div>
+        <div class="box">
+                <?php 
+                    $sql = "SELECT * FROM developer";
+                    $result =mysqli_num_rows (mysqli_query($conn,$sql));
+                    echo "<h3>developer</h3>";
+                    echo "<hr>";
+                    echo "<h4>$result</h4>"
+                ?> 
+        </div>
+        </div>
         
             
         <footer>
@@ -68,6 +97,6 @@ if($_SESSION['email']){
 
 
 <?php }else{
-    header("Location:devlogin.php?error= Please Login !");
+    header("Location:index.php?error= Please Login !");
 } ?>
 

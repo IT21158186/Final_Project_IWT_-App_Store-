@@ -18,7 +18,7 @@ session_start()
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="app.php">Apps</a></li>
                     <li><a href="game.php" id="active">Games</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="contactUs.php">Contact us</a></li>
                     <li><a href="aboutUs.php">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
