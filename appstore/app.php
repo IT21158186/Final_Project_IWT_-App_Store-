@@ -67,7 +67,7 @@ session_start()
         <h3>Related Apps :</h3>
         <div class="container">
             <?php
-                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and (cat_id = 100 or cat_id = 300 or cat_id = 400 or cat_id = 500) ORDER BY RAND()";
+                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100  ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
                 $count = 0;
                 while($row = mysqli_fetch_array($result)){
