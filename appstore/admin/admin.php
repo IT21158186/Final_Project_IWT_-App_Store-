@@ -8,7 +8,7 @@ if($_SESSION['email']){
 <html>
     <head>
         <title>Upload App | AppsyStore</title>
-        <link rel="stylesheet" href="../styles/dashstyle.css">
+        <link rel="stylesheet" href="../styles/admindash.css">
         <link rel="stylesheet" href="../styles/uploadform.css">
         <script src="https://kit.fontawesome.com/24b485c31a.js" crossorigin="anonymous"></script>
         <!--Google Fonts-->
@@ -57,7 +57,7 @@ if($_SESSION['email']){
         
         <!--Dashboard implementation is here-->
         <div class="boxcontainer">
-            <div class="box" style="background-color: rgb(134, 255, 107);">
+            <div class="box">
                 <?php 
                     $sql = "SELECT * FROM apps";
                     $result =mysqli_num_rows (mysqli_query($conn,$sql));
@@ -66,7 +66,7 @@ if($_SESSION['email']){
                     echo "<h4>$result</h4>"
                 ?>     
         </div>
-        <div class="box" style="background-color:rgb(255, 161, 161) ;">
+        <div class="box" >
                  <?php 
                     $sql = "SELECT * FROM reg_users";
                     $result =mysqli_num_rows (mysqli_query($conn,$sql));
@@ -75,7 +75,7 @@ if($_SESSION['email']){
                     echo "<h4>$result</h4>"
                 ?> 
         </div>
-        <div class="box" style="background-color:rgb(161, 195, 255);">
+        <div class="box">
                 <?php 
                     $sql = "SELECT * FROM developer";
                     $result =mysqli_num_rows (mysqli_query($conn,$sql));
