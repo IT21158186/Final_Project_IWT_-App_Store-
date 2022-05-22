@@ -28,8 +28,10 @@ if(isset($_SESSION['email'])){
                     }
                 }else{
                     mysqli_query($conn,$sql3);
+                    header ('Location: ' . $_SERVER['HTTP_REFERER'].'&error= Review places successfully !');
                 }
-                
+
+
           }else{header ('Location: ' . $_SERVER['HTTP_REFERER'].'&error=21st line error !');
 
           }   
