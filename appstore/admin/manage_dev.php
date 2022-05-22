@@ -22,7 +22,7 @@ if($_SESSION['email']){
             <nav>
                 <ul>
                     <li ><a href="admin.php" ><i class="fa-solid fa-house" ></i> Dashboard</a></li>
-                    <li><a href="manage_app.php">Manae Apps</a></li>
+                    <li><a href="manage_app.php">Manage Apps</a></li>
                     <li><a href="manage_user.php" >Manage Users</a></li>
                     <li><a href="manage_dev.php" id="active">Manage Developers</a></li>
                     

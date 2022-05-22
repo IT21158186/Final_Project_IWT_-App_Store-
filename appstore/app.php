@@ -18,7 +18,7 @@ session_start()
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="app.php" id="active">Apps</a></li>
                     <li><a href="game.php">Games</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="contactUs.php">Contact us</a></li>
                     <li><a href="aboutUs.php">About us</a></li>
                     <li>
                         <form action="search.php" method="GET"><input type="search" placeholder="Search" class="search" name="search">
@@ -47,11 +47,11 @@ session_start()
         <h3>Popular Apps :</h3>
         <div class="container">
             <?php
-                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100 and 300 and 400 and 500 ORDER BY RAND()";
+                $query = "SELECT * FROM apps a, developer d, rating r where d.developer_id = a.developer_id and r.app_id = a.app_id and  (cat_id = 100 or cat_id = 300 or cat_id = 400 or cat_id = 500) ORDER BY(r.rate) DESC";
                 $result = mysqli_query($conn,$query);
                 $count = 0;
                 while($row = mysqli_fetch_array($result)){
-                    if($count >= 22){
+                    if($count >= 11){
                         break;
                     }
             ?>
@@ -67,7 +67,7 @@ session_start()
         <h3>Related Apps :</h3>
         <div class="container">
             <?php
-                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and cat_id = 100 and 300 and 400 and 500 ORDER BY RAND()";
+                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id and (cat_id = 100 or cat_id = 300 or cat_id = 400 or cat_id = 500) ORDER BY RAND()";
                 $result = mysqli_query($conn,$query);
                 $count = 0;
                 while($row = mysqli_fetch_array($result)){

@@ -47,7 +47,7 @@ session_start()
         <h3>Popular :</h3>
         <div class="container">
             <?php
-                $query = "SELECT * FROM apps a, developer d,catergory c where d.developer_id = a.developer_id AND a.cat_id =c.cat_id AND a.cat_id='200' ";
+                $query = "SELECT * FROM apps a, developer d, rating r where d.developer_id = a.developer_id and r.app_id = a.app_id and cat_id = 200 ORDER BY(r.rate) DESC";
                 $result = mysqli_query($conn,$query);
                 while($row = mysqli_fetch_array($result)){
             ?>

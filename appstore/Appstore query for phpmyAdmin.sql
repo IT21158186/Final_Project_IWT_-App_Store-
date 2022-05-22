@@ -1,3 +1,5 @@
+--Create Tables--
+
 create table reg_Users(
 email VARCHAR(50),
 first_name VARCHAR(20),
@@ -10,8 +12,9 @@ CONSTRAINT user_pk1 primary key (email)
 CREATE TABLE developer(
 developer_id INT,
 company_name VARCHAR(30),
-about VARCHAR(50),
-email VARCHAR(50) not null,
+about VARCHAR(255),
+email VARCHAR(255) not null UNIQUE,
+mobile VARCHAR(255),
 password VARCHAR(50) not null,
 CONSTRAINT developer_pk PRIMARY KEY(developer_id)
 );
@@ -25,7 +28,7 @@ CONSTRAINT cat_pk PRIMARY KEY(cat_id)
 CREATE TABLE apps(
 app_id INT NOT NULL AUTO_INCREMENT,
 app_name VARCHAR(40),
-description VARCHAR(50) ,
+description VARCHAR(255) ,
 developer_id INT,
 cat_id INT,
 file_path VARCHAR(80),
@@ -40,10 +43,17 @@ CREATE TABLE review(
 app_id INT,
 email VARCHAR(50),
 rating INT,
-comment VARCHAR(40),
+comment VARCHAR(255),
 CONSTRAINT review_pk PRIMARY KEY(app_id,email),
 CONSTRAINT review_fk_1 FOREIGN KEY (app_id) references apps(app_id),
 CONSTRAINT review_fk_2 FOREIGN KEY (email) references reg_Users(email)
+);
+
+CREATE TABLE rating(
+app_id INT,
+rating INT,
+CONSTRAINT rating_pk PRIMARY KEY(app_id),
+CONSTRAINT rating_fk FOREIGN KEY (app_id) references apps(app_id)
 );
 
 CREATE TABLE administrator(
@@ -53,6 +63,8 @@ email VARCHAR(50),
 password VARCHAR(50),
 CONSTRAINT adminis_pk PRIMARY KEY (admin_id)
 );
+
+--Insert Data to the tables--
 
 INSERT INTO reg_Users VALUES ('mahagedara@mail.com','Nimsara','Mahagedara','Nimsara1122','0763355762');
 INSERT INTO reg_Users VALUES ('pinidiya96@mail.com','Uresh','Pinidiya','Uresh1122','0712342433');
@@ -91,19 +103,10 @@ INSERT INTO administrator VALUES('303','Ad.Uresh','uresh@gmail.com','uresh1234')
 INSERT INTO administrator VALUES('404','Ad.Nimsara','nimsara@gmail.com','nimsara1234');
 INSERT INTO administrator VALUES('505','Ad.Sandali','sandali@gmail.com','sandali1234');
 
-ALTER TABLE `developer`
-ADD UNIQUE (email);
-ALTER TABLE `developer`
-ADD `mobile` varchar(255); 
+INSERT INTO rating VALUES('1','1');
+INSERT INTO rating VALUES('2','1');
+INSERT INTO rating VALUES('3','1');
+INSERT INTO rating VALUES('4','1');
+INSERT INTO rating VALUES('5','1');
 
-
-select *
-from reg_Users
-select *
-from review
-select *
-from administrator
-select *
-from apps
-select *
-from catergory
+--ALTER TABLE `developer` ADD UNIQUE (email);--

@@ -49,7 +49,7 @@ session_start()
         <h3>Popular :</h3>
         <div class="container">
             <?php
-                $query = "SELECT * FROM apps a, developer d where d.developer_id = a.developer_id ORDER BY RAND()";
+                $query = "SELECT * FROM apps a, developer d, rating r where d.developer_id = a.developer_id and r.app_id = a.app_id ORDER BY(r.rate) DESc";
                 $result = mysqli_query($conn,$query);
                 $count = 0;
                 while($row = mysqli_fetch_array($result)){
