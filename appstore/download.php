@@ -65,7 +65,9 @@ $row = mysqli_fetch_assoc($result);
                 <td class="h3"><h3>Category :<?php echo $row['cat_name'] ?></h3></td>
             </tr>
             <tr>
-                <td colspan="2"><a href="uploads/<?php echo $row['file_path']?>" class="downloadbtn">Download Now &darr;</a></td>
+                <td colspan="2"><a href="<?php /*Can download app if only logged in*/
+                                    if(isset($_SESSION['email'])){ echo "uploads/".$row['file_path'];
+                                                        }else{echo "login.php?error= Please login first !";}?>" class="downloadbtn">Download Now &darr;</a></td>
             </tr>
             
             <tr>
